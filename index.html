@@ -14,12 +14,12 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" max="40" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" max="40" value="10">
         Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" max="40" value="1">
+        <input type="number" id="inputWidth" name="width" min="1" max="40" value="10">
         <input type="submit" id="submit" value="Start!">
-        <input type="submit" id="clearButton" disabled value="Clear Canvas">
-        <input type="submit" id="finishButton" value="Finish!">
+        <input type="button" id="clearButton" disabled value="Clear Canvas">
+        <input type="button" id="finishButton" value="Finish!">
         <input type="checkbox" id="checkbox" name="Grid Lines" checked>
         <label for="checkbox">Grid Lines</label>
         <select id="cellSize">
@@ -31,7 +31,7 @@
     </form>
     <h2>Pick A Color</h2>
     <input type="color" id="firstColorPicker">
-    <input type="color" id="secondColorPicker">
+    <input type="color" id="secondColorPicker" value="#FF0000">
 
     <h2>Design Canvas</h2>
     <table id="pixelCanvas"></table>
