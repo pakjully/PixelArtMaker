@@ -1,15 +1,26 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
 body {
+    background-image:url("Images/clement-duguerre-hXIyFFYwOGo-unsplash.jpg");
+    background-size: cover;
     text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+    background-position: center;
 }
 
 h1 {
-    font-family: Monoton;
-    font-size: 70px;
+    font-family: 'Pacifico';
+    font-size: 80px;
     margin: 0.2em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+    margin: 1em 0 1em;
 }
 
 h2:first-of-type {
@@ -27,14 +38,33 @@ table {
     margin: 0 auto;
 }
 
-tr {
-    height: 20px;
-}
-
 td {
+    height: 20px;
     width: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
 }
 
 input[type=number] {
-    width: 6em;
+    width: 5em;
+}
+
+#pixelCanvas.without-grid td {
+    border: 1px solid transparent;
+}
+
+#pixelCanvas[data-size="small"] td {
+    width: 15px;
+    height: 15px;
+}
+
+#pixelCanvas[data-size="medium"] td {
+    width: 20px;
+    height: 20px;
+}
+
+#pixelCanvas[data-size="large"] td {
+    width: 25px;
+    height: 25px;
 }

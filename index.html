@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,18 +14,28 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" max="40" value="10">
         Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
+        <input type="number" id="inputWidth" name="width" min="1" max="40" value="10">
+        <input type="submit" id="submit" value="Start!">
+        <input type="button" id="clearButton" disabled value="Clear Canvas">
+        <input type="button" id="finishButton" value="Finish!">
+        <input type="checkbox" id="checkbox" name="Grid Lines" checked>
+        <label for="checkbox">Grid Lines</label>
+        <select id="cellSize">
+           <option disabled selected>Choose Cell Size</option>
+           <option value="15 px" id="small">15 px</option>
+           <option value="20 px" id="medium">20 px</option>
+           <option value="25 px" id="large">25 px</option>
+        </select>
     </form>
-
     <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+    <input type="color" id="firstColorPicker">
+    <input type="color" id="secondColorPicker" value="#FF0000">
 
     <h2>Design Canvas</h2>
     <table id="pixelCanvas"></table>
 
-    <script src="designs.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
